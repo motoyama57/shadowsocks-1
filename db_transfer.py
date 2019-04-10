@@ -661,35 +661,35 @@ class DbTransfer(object):
                         port].modify_detect_text_list(self.detect_text_list)
                     ServerPool.get_instance().tcp_servers_pool[
                         port].modify_detect_hex_list(self.detect_hex_list)
-                if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
-                    ServerPool.get_instance().tcp_ipv6_servers_pool[
-                        port].modify_detect_text_list(self.detect_text_list)
-                    ServerPool.get_instance().tcp_ipv6_servers_pool[
-                        port].modify_detect_hex_list(self.detect_hex_list)
+                #if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
+                #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+                #        port].modify_detect_text_list(self.detect_text_list)
+                #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+                #        port].modify_detect_hex_list(self.detect_hex_list)
                 if port in ServerPool.get_instance().udp_servers_pool:
                     ServerPool.get_instance().udp_servers_pool[
                         port].modify_detect_text_list(self.detect_text_list)
                     ServerPool.get_instance().udp_servers_pool[
                         port].modify_detect_hex_list(self.detect_hex_list)
-                if port in ServerPool.get_instance().udp_ipv6_servers_pool:
-                    ServerPool.get_instance().udp_ipv6_servers_pool[
-                        port].modify_detect_text_list(self.detect_text_list)
-                    ServerPool.get_instance().udp_ipv6_servers_pool[
-                        port].modify_detect_hex_list(self.detect_hex_list)
+                #if port in ServerPool.get_instance().udp_ipv6_servers_pool:
+                #    ServerPool.get_instance().udp_ipv6_servers_pool[
+                #        port].modify_detect_text_list(self.detect_text_list)
+                #    ServerPool.get_instance().udp_ipv6_servers_pool[
+                #        port].modify_detect_hex_list(self.detect_hex_list)
 
                 if row['is_multi_user'] != 0:
                     if port in ServerPool.get_instance().tcp_servers_pool:
                         ServerPool.get_instance().tcp_servers_pool[
                             port].modify_multi_user_table(md5_users)
-                    if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
-                        ServerPool.get_instance().tcp_ipv6_servers_pool[
-                            port].modify_multi_user_table(md5_users)
+                    #if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+                    #        port].modify_multi_user_table(md5_users)
                     if port in ServerPool.get_instance().udp_servers_pool:
                         ServerPool.get_instance().udp_servers_pool[
                             port].modify_multi_user_table(md5_users)
-                    if port in ServerPool.get_instance().udp_ipv6_servers_pool:
-                        ServerPool.get_instance().udp_ipv6_servers_pool[
-                            port].modify_multi_user_table(md5_users)
+                    #if port in ServerPool.get_instance().udp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().udp_ipv6_servers_pool[
+                    #        port].modify_multi_user_table(md5_users)
 
                 if self.is_relay and row['is_multi_user'] != 2:
                     temp_relay_rules = {}
@@ -719,15 +719,15 @@ class DbTransfer(object):
                     if port in ServerPool.get_instance().tcp_servers_pool:
                         ServerPool.get_instance().tcp_servers_pool[
                             port].push_relay_rules(temp_relay_rules)
-                    if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
-                        ServerPool.get_instance().tcp_ipv6_servers_pool[
-                            port].push_relay_rules(temp_relay_rules)
+                    #if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+                    #        port].push_relay_rules(temp_relay_rules)
                     if port in ServerPool.get_instance().udp_servers_pool:
                         ServerPool.get_instance().udp_servers_pool[
                             port].push_relay_rules(temp_relay_rules)
-                    if port in ServerPool.get_instance().udp_ipv6_servers_pool:
-                        ServerPool.get_instance().udp_ipv6_servers_pool[
-                            port].push_relay_rules(temp_relay_rules)
+                    #if port in ServerPool.get_instance().udp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().udp_ipv6_servers_pool[
+                    #        port].push_relay_rules(temp_relay_rules)
 
                 else:
                     temp_relay_rules = {}
@@ -735,15 +735,15 @@ class DbTransfer(object):
                     if port in ServerPool.get_instance().tcp_servers_pool:
                         ServerPool.get_instance().tcp_servers_pool[
                             port].push_relay_rules(temp_relay_rules)
-                    if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
-                        ServerPool.get_instance().tcp_ipv6_servers_pool[
-                            port].push_relay_rules(temp_relay_rules)
+                    #if port in ServerPool.get_instance().tcp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+                    #        port].push_relay_rules(temp_relay_rules)
                     if port in ServerPool.get_instance().udp_servers_pool:
                         ServerPool.get_instance().udp_servers_pool[
                             port].push_relay_rules(temp_relay_rules)
-                    if port in ServerPool.get_instance().udp_ipv6_servers_pool:
-                        ServerPool.get_instance().udp_ipv6_servers_pool[
-                            port].push_relay_rules(temp_relay_rules)
+                    #if port in ServerPool.get_instance().udp_ipv6_servers_pool:
+                    #    ServerPool.get_instance().udp_ipv6_servers_pool[
+                    #        port].push_relay_rules(temp_relay_rules)
 
                 if port in ServerPool.get_instance().tcp_servers_pool:
                     relay = ServerPool.get_instance().tcp_servers_pool[port]
@@ -795,15 +795,15 @@ class DbTransfer(object):
             if mu_user_port in ServerPool.get_instance().tcp_servers_pool:
                 ServerPool.get_instance().tcp_servers_pool[
                     mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
-            if mu_user_port in ServerPool.get_instance().tcp_ipv6_servers_pool:
-                ServerPool.get_instance().tcp_ipv6_servers_pool[
-                    mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
+            #if mu_user_port in ServerPool.get_instance().tcp_ipv6_servers_pool:
+            #    ServerPool.get_instance().tcp_ipv6_servers_pool[
+            #       mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
             if mu_user_port in ServerPool.get_instance().udp_servers_pool:
                 ServerPool.get_instance().udp_servers_pool[
                     mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
-            if mu_user_port in ServerPool.get_instance().udp_ipv6_servers_pool:
-                ServerPool.get_instance().udp_ipv6_servers_pool[
-                    mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
+            #if mu_user_port in ServerPool.get_instance().udp_ipv6_servers_pool:
+            #    ServerPool.get_instance().udp_ipv6_servers_pool[
+            #        mu_user_port].reset_single_multi_user_traffic(self.port_uid_table[port])
 
     def new_server(self, port, passwd, cfg):
         protocol = cfg.get(
