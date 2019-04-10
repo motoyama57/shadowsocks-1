@@ -673,14 +673,14 @@ class UDPRelay(object):
                                        (common.to_str(server_addr), server_port,
                                         r_addr[0], r_addr[1], self._listen_port))
                 else:
-                    common.connect_log(
-                        'UDP data to %s:%d from %s:%d via port %d,hex data : %s' %
-                        (common.to_str(server_addr),
-                         server_port,
-                         r_addr[0],
-                            r_addr[1],
-                            self._listen_port,
-                            binascii.hexlify(data)))
+                    #common.connect_log(
+                    #    'UDP data to %s:%d from %s:%d via port %d,hex data : %s' %
+                    #    (common.to_str(server_addr),
+                    #     server_port,
+                    #     r_addr[0],
+                    #        r_addr[1],
+                    #        self._listen_port,
+                    #        binascii.hexlify(data)))
                 if self._config['is_multi_user'] != 2:
                     if common.to_str(r_addr[0]) in self.wrong_iplist and r_addr[
                             0] != 0 and self.is_cleaning_wrong_iplist == False:
